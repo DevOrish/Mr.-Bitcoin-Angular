@@ -1,0 +1,32 @@
+.list-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  a {
+    margin-top: 15px;
+    font-size: 20px;
+    font-family: open-sans, Arial, Helvetica, sans-serif;
+    padding: 8px 18px;
+    background-color: rgba(255, 255, 255, 0.514);
+    color: unset;
+    text-decoration: unset;
+    border: 1px solid gold;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: all 0.3s;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.712);
+    }
+  }
+}
+
+.filter-input {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  border-bottom: 1.5px solid gold;
+  background-color: unset;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}

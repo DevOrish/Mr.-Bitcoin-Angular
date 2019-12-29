@@ -1,0 +1,8 @@
+<div class="list-header">
+    <h1>Contact List</h1>
+    <label>Search Contact:  
+        <input class="filter-input" type="text" (change)="handleFilter()" name="filter" [(ngModel)]="filter" placeholder="Contact Name">
+    </label>
+    <a routerLink="/edit" routerLinkActive="active">Add Contact</a>
+</div>
+<contact-list *ngIf="contacts" [contacts]="contactsToShow"></contact-list>

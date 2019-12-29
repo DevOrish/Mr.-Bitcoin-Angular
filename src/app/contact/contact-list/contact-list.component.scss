@@ -1,0 +1,27 @@
+.contact-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 10px;
+  > * {
+    width: 100%;
+    margin: 0.5%;
+  }
+  @media screen and (min-width: 550px) {
+
+    > * {
+      width: 75%;
+    }
+  }
+  @media screen and (min-width: 800px) {
+    flex-direction: row;
+
+    > * {
+      width: 49%;
+    }
+  }
+}

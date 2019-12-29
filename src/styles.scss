@@ -1,0 +1,61 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    box-sizing: border-box;
+  }
+  
+  html{
+    margin: 0;
+    padding: 0;
+    font-family: open-sans, Arial, Helvetica, sans-serif;
+    background-image: url(assets/img/bcg.jpg);
+  }
+  
+  body {
+    padding: 0;
+    margin: 0;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.459);
+    height: 65px;
+    padding: 15px 25px;
+    margin-bottom: 20px;
+    a {
+      text-decoration: none;
+      color: unset;
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .logo-b {
+      color: rgb(230, 195, 0);
+    }
+  }
+
+  @font-face {
+    font-family: open-sans;
+    src: url(assets/fonts/OpenSans.ttf) format("opentype");
+  }
+
+  // .swal2-popup.swal2-toast .swal2-title {
+  //   font-size: 1.7rem !important;
+  // }
+  

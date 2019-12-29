@@ -1,0 +1,23 @@
+<section *ngIf="contact" class="contact-details">
+    <h1>{{contact.name}}'s details:</h1>
+    <p>Email : {{contact.email}}</p>
+    <p className="phone">Phone Number : {{contact.phone}}</p>
+    <div class="contact-actions">
+        <a routerLink="/edit/{{contact._id}}" routerLinkActive="active">Edit Contact</a>
+        <button (click)="removeContact(contact._id)">Remove Contact</button>
+    </div>
+    <form (submit)="transferBtc($event,amount)" class="btc-transfer-container">
+        <label>
+            Transfer BTC :
+            <input type="text" name="btc" [(ngModel)]="amount" placeholder="BTC" />
+        </label>
+        <button>Transfer</button>
+    </form>
+    <div class="transfer-img">
+        <img src="https://robohash.org/{{contact._id}}/?set=set5" />
+        <div *ngIf="movesToContact.length" class="moves-list">
+            <h4>Moves List:</h4>
+            <move-list [moves]="movesToContact"></move-list>
+        </div>
+    </div>
+</section>

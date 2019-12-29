@@ -1,0 +1,8 @@
+<section class="login-container">
+    <h1>Login / Signup</h1>
+    <img class="bitcoin-img" src="../../assets/img/bitcoin.png" alt="bitcoin">
+    <form (submit)="login($event)">
+            <input name="name" type="text" [(ngModel)]="name" placeholder="Enter name" autocomplete="off">
+        <button>Sign-In</button>
+    </form>
+</section>

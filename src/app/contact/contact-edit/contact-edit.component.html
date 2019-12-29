@@ -1,0 +1,12 @@
+<h1 *ngIf="contact._id;else notContact">Contact edit</h1>
+<ng-template #notContact>
+    <h1>Add a new contact</h1>
+</ng-template>
+<form (submit)=saveContact($event)>
+    <label>Full Name: <input type="text" name="name" [(ngModel)]="contact.name" placeholder="Enter name" /></label>
+    <label>Email Adress: <input type="email" name="email" [(ngModel)]="contact.email"
+            placeholder="Enter email" /></label>
+    <label>Phone Number: <input type="text" name="phone" [(ngModel)]="contact.phone"
+            placeholder="Enter phone" /></label>
+    <button>Save</button>
+</form>

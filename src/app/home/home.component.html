@@ -1,0 +1,13 @@
+<section class="user-data">
+    <h1>Welcome, {{loggedInUser.name}}</h1>
+    <h4>Your coins : {{loggedInUser.coins}}</h4>
+    <h4>BTC rate is: {{rate}}</h4>
+    <ng-template [ngIf]="loggedInUser.moves.length" [ngIfElse]="noMoves">
+        <h5>Moves List:</h5>
+        <move-list [moves]="loggedInUser.moves"></move-list>
+    </ng-template>
+    <ng-template #noMoves>
+        <h3>No moves yet!</h3>
+    </ng-template>
+    <a routerLink="/contact" routerLinkActive="active">See your contacts</a>
+</section>
